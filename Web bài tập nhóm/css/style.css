@@ -1,0 +1,492 @@
+/* ==================== BASE ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    bottom: 0;
+}
+
+:root {
+    --nav-color: #1B1B1B;
+    --background-color: #080808;
+    --green-color: #62BA1B;
+    --btn-color: #3F8E00;
+    --text-color: #9C9C9C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color: var(--background-color);
+    color: #ffffff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================== NAVBAR ==================== */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    height: 70px;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    position: fixed;
+}
+
+.nav::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nav::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkBtn {
+    display: none;
+}
+
+
+.nav ol {
+    list-style: none;
+}
+
+.nav ol a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0.2em;
+    padding: 0.5em 1.5em;
+}
+
+.nav ol a:hover {
+   color: var(--green-color);
+}
+
+.active {
+    color: var(--green-color) !important;
+}
+
+/* Main section */
+.main {
+    width: 75%;
+    height: 670px;
+    margin: 0 auto;
+}
+
+.main .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5em;
+}
+
+
+.main .box .title h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+}
+
+.main .box .title p {
+    font-size: 1.2em;
+    color: var(--text-color);
+    margin-bottom: 1.2em;
+}
+
+.main .box .title .btn {
+    font-size: 1.2em;
+    background: var(--btn-color);
+    color: #cacaca;
+    cursor: pointer;
+    border: 1px solid var(--green-color);
+    border-radius: 4px;
+    width: 18em;
+    height: 4em;
+    transition: all .4s;
+    box-shadow: 0 0 10px var(--green-color);
+    margin-bottom: 5em;
+}
+
+.main .box .title .btn:hover {
+    box-shadow: 0 0 10px var(--green-color), 0 0 40px  var(--green-color),
+    0 0 50px var(--green-color);
+}
+
+.main .member p {
+    color: #ffffff;
+    margin-bottom: 2em;
+}
+
+.main .member .row {
+    display: flex;
+}
+
+.main .member .row a {
+    color: #ffffff;
+    padding: 1em 4em;
+    margin-right: 4em;
+    border: 1px solid var(--green-color);
+    border-radius: 5px;
+}
+
+.main .member .row a:hover {
+    background-color: var(--btn-color);
+    box-shadow: 0 0 10px var(--green-color), 0 0 40px  var(--green-color),
+    0 0 50px var(--green-color);
+}
+
+.main img {
+    width: 25em;
+    height: 25em;
+    z-index: -1;
+    border-radius: 50%;
+
+}
+
+/* ==================== INTRODUCTION ==================== */
+
+.introduction {
+    width: 100%;
+    padding: 3em 0;
+    background: #ffffff;
+    flex-direction: column;
+}
+
+.introduction .heading {
+    margin-bottom: 5em;
+}
+
+.introduction .heading h2 {
+    color: var(--nav-color);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.introduction .heading p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    word-spacing: 0.1em;
+    text-align: center;
+}
+
+.introduction h3 {
+    color: var(--nav-color);
+    font-size: 1.5em;
+    margin: 0.8em 0;
+}
+
+.introduction ul {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+.introduction ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+.introduction .content {
+    width: 70%;
+}
+
+.introduction .box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 3em;
+}
+
+.introduction .container {
+    margin-top: 2em;
+}
+
+.introduction img {
+    width: 40%;
+    border-radius: 5px;
+}
+
+.introduction .span_design {
+    color: #FFA217;
+    background: #FFF6E9;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+}
+
+.introduction .span_frontend {
+    color: #000AFF;
+    background: #D0E6FF;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+}
+
+.introduction .span_backend {
+    color: #2AB090;
+    background: #E0FFF8;
+    padding: 0.4em 1em;
+    border-radius: 10px;
+}
+
+/* ==================== Member ==================== */
+
+.member {
+    width: 100%;
+    padding: 3em 0;
+    flex-direction: column;
+}
+
+.member .heading {
+    margin-bottom: 5em;
+}
+
+.member .heading h2 {
+    color: #ffffff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.member .heading p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.member .row_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5em; 
+}
+
+.member .row_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 5em;
+    gap: 10em;
+}
+
+.member .box_1 {
+    border: 1px solid var(--text-color);
+    padding: 2em 2em;
+    margin: 0 5em;
+    border-radius: 5px;
+    width: 33.33333%;
+}
+
+.member .box_2 {
+    border: 1px solid var(--text-color);
+    padding: 2em 2em;
+    border-radius: 5px;
+    margin: 0 -10em;
+    width: 33.33333%;
+}
+.member .row_1 .box_1 img, 
+.member .row_2 .box_2 img {
+    width: 30%;
+}
+
+.member .box_1 .name_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.member .box_2 .name_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+/* ==================== ASIGNMENT ==================== */
+
+.asignment {
+    width: 100%;
+    padding: 3em 0;
+    background: #ffffff;
+    flex-direction: column;
+}
+
+.asignment .heading {
+    margin-bottom: 4.5em;
+}
+
+.asignment .heading h2 {
+    color: var(--nav-color);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.asignment p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    word-spacing: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+.asignment h3 {
+    color: var(--nav-color);
+    font-size: 1.5em;
+    margin: 0.8em 0;
+}
+
+.asignment ul {
+    list-style: disc;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.asignment ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+.asignment button {
+    font-size: 1.2em;
+    background: var(--green-color);
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid var(--green-color);
+    border-radius: 5px;
+    width: 10em;
+    height: 2.5em;
+    transition: all .4s;
+    box-shadow: 0 0 10px var(--green-color);
+}
+
+.asignment .row {
+    width: 80%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+}
+
+.asignment .row .team_1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.asignment .row .team_2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+/* ==================== CONTACT ==================== */
+
+.contact {
+    width: 100%;
+    padding: 3em 0;
+    flex-direction: column;
+    height: 600px;
+}
+
+.contact .heading {
+    margin-bottom: 3em;
+}
+
+.contact .heading h2 {
+    color: #ffffff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.contact .heading p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.contact form {
+    align-items: baseline;
+    flex-direction: column;
+    min-width: 30%;
+}
+
+.contact form :is(input, textarea, button) {
+    margin: 0.5em 1em 2em 1em;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    color: var(--text-color);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.contact form :is(input, textarea):focus::placeholder {
+    color: transparent;
+}
+
+.contact form button {
+    background: var(--green-color);
+    color: #ffffff;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1em;
+    padding: 1em;
+    margin: 0;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: var(--nav-color);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    color: var(--text-color);
+}
+
+footer i {
+    color: red;
+}
